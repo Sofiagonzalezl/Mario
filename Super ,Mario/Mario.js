@@ -1,8 +1,21 @@
 function piso(nPiso, altura){ 
-    //To do. Deben poner el número correcto
-    // de espacios y de numerales de acuerdo
-    // al Npiso y a la altura 
-    return  "<p>" + "####" + "</p>"
+// construir cadena de caracteres que el número
+// de espacios y # correcto
+nEspacios = altura - nPiso;
+nNumerales = nPiso;
+texto ="<p>"
+//añadir un espacio al texto nEspacios veces
+for (let i=0, i<nEspacios; i++)
+{
+    texto = texto +"&nbsp"
+}
+// añadir # al texto nNumeral veces
+for (let i=0; i <nNumeral;i++)
+{
+    texto= texto+"#"
+}
+texto=texto + "</p>"
+return texto
 }
 let nPisos;
 do{
@@ -21,4 +34,3 @@ let contenido =  `<p> &nbsp;&nbsp; &nbsp; &nbsp;<s</p>
 <p>a  <li</p>`
 let contenedor = document.querySelector("#contenedor");
 contenedor.innerHTML = contenido;
-
